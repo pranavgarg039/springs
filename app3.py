@@ -50,7 +50,7 @@ def main():
         free_length = solid_length + 1.15*disp_max
 
         st.subheader('Output Section')
-        st.markdown(f"PROPERTIES OF THE SPRING:")
+        st.markdown(f"PROPERTIES OF THE SPRING FOR STATIC LOADING:")
         st.markdown(f"Wire Diameter : {tup[1]} mm")
         st.markdown(f"Material : {material}")
         st.markdown(f"Wire Diameter : {tup[1]} mm")
@@ -63,8 +63,8 @@ def main():
         F_a = (max_force - min_force)/2.0
         K_a = float(4*tup[0]-1)/(4*tup[0]-4) + 0.615/tup[0]
         K_m = 1 + 0.5/tup[0]
-        tau_m = K_m*8*F_m*D/(3.14*(tup[0]**3))
-        tau_a = K_a*8*F_a*D/(3.14*(tup[0]**3))
+        tau_m = K_m*8*F_m*D/(3.14*(tup[1]**3))
+        tau_a = K_a*8*F_a*D/(3.14*(tup[1]**3))
         S_se = 0.22*tup[2]
         S_sy = 0.45*tup[2]
         const2 = (2*tau_a*(S_sy - 0.5*S_se))/S_se + tau_m
