@@ -50,14 +50,14 @@ def main():
         free_length = solid_length + 1.15*disp_max
 
         st.subheader('Output Section')
-        st.markdown(f"PROPERTIES OF THE SPRING FOR STATIC LOADING:")
-        st.markdown(f"Wire Diameter : {tup[1]} mm")
-        st.markdown(f"Material : {material}")
-        st.markdown(f"Wire Diameter : {tup[1]} mm")
-        st.markdown(f"Mean Coil Diameter : {D} mm ")
-        st.markdown(f'Total Turns : {total_turns}')
-        st.markdown(f'Solid Length : {solid_length} mm')
-        st.markdown(f'Free Length : {free_length} mm')
+        st.markdown(f"**PROPERTIES OF THE SPRING FOR STATIC LOADING:**")
+        st.markdown(f"**Wire Diameter : {tup[1]} mm**")
+        st.markdown(f"**Material : {material}**")
+        st.markdown(f"**Wire Diameter : {tup[1]} mm**")
+        st.markdown(f"**Mean Coil Diameter : {D} mm **")
+        st.markdown(f'**Total Turns : {total_turns}**')
+        st.markdown(f'**Solid Length : {solid_length} mm**')
+        st.markdown(f'**Free Length : {free_length} mm**')
 
         F_m = (max_force + min_force)/2.0
         F_a = (max_force - min_force)/2.0
@@ -69,7 +69,7 @@ def main():
         S_sy = 0.45*tup[2]
         const2 = (2*tau_a*(S_sy - 0.5*S_se))/S_se + tau_m
         FoS = S_sy/const2
-        st.markdown(f"Factor of safety of the spring for fatigue loading is {round(FoS,2)}")
+        st.markdown(f"**Factor of safety of the spring for fatigue loading is {round(FoS,2)}**")
         
 
     
